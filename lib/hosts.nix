@@ -61,6 +61,18 @@ let
         # This computer's specific settings
         "${self}/hosts/${hostDir}/default.nix"
         "${self}/hosts/${hostDir}/hardware-configuration.nix"
+
+        # Syncthing
+        {
+          services.syncthing = {
+            enable = true;
+            user = "${username}";  # Spawn as user service
+            dataDir = "/home/${username}";  # Default location for new folders
+            configDir = "/home/${username}/.config/syncthing";
+            openDefaultPorts = true;    # Open ports in the firewall for Syncthing
+          };
+        }
+
       ];
     };
 in
