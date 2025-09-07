@@ -26,6 +26,12 @@
     zoxide                      # Smarter `cd` command
     tree                        # Directory tree viewer
     gdu                         # Disk usage analyzer (ncdu on steroids)
+    zip                         # Compressor/archiver for zipfiles
+    rar                         # Utility for RAR archives
+    unar                        # Archive unpacker program
+    unrar-wrapper               # Backwards compatibility between unar and unrar
+    unzip                       # Extraction utility for zipfiles
+    p7zip                       # New p7zip fork
     gparted                     # Disk partitioning tool
     czkawka-full                # Deduplication toolbox
     ryzenadj                    # AMD CPU tuning utility
@@ -35,6 +41,8 @@
     rclone                      # Ultimate cloning utility
     ghostty                     # GPU-accelerated terminal
     krusader                    # Ultimate File Manager
+    kdePackages.kompare         # Graphical file differences tool
+    krename                     # Powerful batch renamer for KDE
 
     # === INFO & MONITORING === #
     btop                        # System monitor (TUI)
@@ -77,6 +85,7 @@
 
     # === OFFICE & PRODUCTIVITY === #
     onlyoffice-desktopeditors   # Better office suite
+    thunderbird-latest-unwrapped# Full-featured e-mail client
     apostrophe                  # Comfy markdown editor
     keepassxc                   # Password manager
     keypunch                    # Typing practice application
