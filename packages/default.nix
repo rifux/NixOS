@@ -33,6 +33,7 @@
     unzip                       # Extraction utility for zipfiles
     p7zip                       # New p7zip fork
     gparted                     # Disk partitioning tool
+    ntfs3g                      # FUSE-based NTFS driver
     czkawka-full                # Deduplication toolbox
     ryzenadj                    # AMD CPU tuning utility
     lact                        # AMD GPU tuning utility
