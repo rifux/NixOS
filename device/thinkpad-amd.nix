@@ -64,7 +64,7 @@ in
       CPU_BOOST_ON_AC=1;
       CPU_BOOST_ON_BAT=0;
 
-      START_CHARGE_THRESH_BAT0 = 40; # at 40 and below it starts to charge
+      START_CHARGE_THRESH_BAT0 = 70; # at 70 and below it starts to charge
       STOP_CHARGE_THRESH_BAT0 = 80; # at 80 it stops charging
 
       WIFI_PWR_ON_AC="off";
