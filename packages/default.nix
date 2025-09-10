@@ -114,9 +114,13 @@
     xonotic                     # Fast-paced FPS
     veloren                     # Voxel adventure game
 
+    # === FONTS === #
+    nerd-fonts.jetbrains-mono   # Programming fonts
+    corefonts                   # Core Microsoft TrueType fonts
+    vista-fonts                 # Some of fonts from Windows Vista
+
     # === MISC === #
     gnome-weather               # Weather app
-    nerd-fonts.jetbrains-mono   # Programming fonts
 
   ] ++ (with pkgs-unstable; [
     # === SYSTEM UTILITIES & MANAGEMENT (UNSTABLE) === #
