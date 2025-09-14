@@ -86,7 +86,7 @@
 
     # === OFFICE & PRODUCTIVITY === #
     onlyoffice-desktopeditors   # Better office suite
-    thunderbird-latest-unwrapped# Full-featured e-mail client
+    thunderbird-esr             # Full-featured e-mail client
     apostrophe                  # Comfy markdown editor
     keepassxc                   # Password manager
     keypunch                    # Typing practice application
