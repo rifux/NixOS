@@ -14,6 +14,8 @@
       ./../../device/thinkpad-amd.nix  # ThinkPad AMD tweaks
       # Japanese
       ./../../pkg/Japanese.nix
+      # Additional specific packages
+      ./packages
     ];
 
   # Hostname
