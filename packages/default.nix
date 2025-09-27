@@ -70,6 +70,7 @@
     # === INTERNET === #
     librewolf                   # Privacy-focused Firefox fork
     ungoogled-chromium          # Chromium without Google integration
+    epiphany                    # GNOME Internet browser
 
     # === COMMUNICATION === #
     fractal                     # Matrix client
