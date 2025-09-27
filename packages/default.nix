@@ -60,6 +60,7 @@
     mkvtoolnix                  # MKV manipulation tool
     ffmpeg-full                 # Multimedia framework
     imagemagick                 # Command-line image manipulation suite
+    identity                    # Image and video comparison tool
     flowblade                   # Video editor
     krita                       # Digital painting
     inkscape-with-extensions    # Vector graphics editor
