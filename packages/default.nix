@@ -59,6 +59,7 @@
     mpv                         # Media player
     mkvtoolnix                  # MKV manipulation tool
     ffmpeg_6-full               # Multimedia framework
+    imagemagick                 # Command-line image manipulation suite
     flowblade                   # Video editor
     krita                       # Digital painting
     inkscape-with-extensions    # Vector graphics editor
