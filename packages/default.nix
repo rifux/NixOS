@@ -91,6 +91,7 @@
     keepassxc                   # Password manager
     keypunch                    # Typing practice application
     anki                        # Flashcard app
+    wordbook                    # English dictionary app
 
     # === ENTERTAINMENT === #
     komikku                     # Manga reader
