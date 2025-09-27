@@ -96,6 +96,7 @@
     # === ENTERTAINMENT === #
     komikku                     # Manga reader
     foliate                     # E-book reader
+    kiwix                       # Offline web browser
     gnome-podcasts              # GNOME podcast app
     youtube-music               # YouTube Music client
     shortwave                   # Internet radio player
