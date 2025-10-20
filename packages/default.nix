@@ -132,4 +132,10 @@
     superfile                   # Modern TUI file manager
     
   ]);
+
+  # GNUPG for signing Git commits, etc
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-gnome3;
+  };
 }
