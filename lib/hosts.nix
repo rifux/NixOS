@@ -34,6 +34,7 @@ let
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
           home-manager.users.${username} = { ... }: {
             imports = [ "${self}/hosts/${hostDir}/home.nix" ];
             _module.args = {
@@ -52,6 +53,7 @@ let
         # "${self}/modules/niri"  # TODO
         # "${self}/modules/waybar.nix"  # TODO
         "${self}/modules/plasma.nix"
+        "${self}/modules/niri"
         "${self}/modules/proxy.nix"
         "${self}/modules/system.nix"
         "${self}/packages/default.nix"
@@ -61,6 +63,8 @@ let
         # This computer's specific settings
         "${self}/hosts/${hostDir}/default.nix"
         "${self}/hosts/${hostDir}/hardware-configuration.nix"
+
+        { programs.custom.niri.enable = true; }
 
         # Syncthing
         {

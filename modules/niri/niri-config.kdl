@@ -1,0 +1,24 @@
+binds {
+    Mod+T { spawn "ghostty"; }
+    Mod+D { spawn "fuzzel"; }
+    Mod+Shift+E { quit; }
+    
+    // Window management
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+        }
+    }
+}
+
+layout {
+    gaps 16
+    center-focused-column "never"
+}
