@@ -3,18 +3,24 @@
 let
   # This is "factory" function
   mkHost =
-    hostDir:  # Which folder has this computer's settings
+    hostDir: # Which folder has this computer's settings
     {
-      arch ? "x86_64-linux",           # Default processor type
-      hostname ? hostDir,              # Default name = folder name
-      username ? "me",                 # Default username
-      userDescription ? "Rifux User",  # Default user description
+      arch ? "x86_64-linux", # Default processor type
+      hostname ? hostDir, # Default name = folder name
+      username ? "me", # Default username
+      userDescription ? "Rifux User", # Default user description
     }:
     # Now build the configuration
     inputs.nixpkgs.lib.nixosSystem {
       system = arch;
       specialArgs = {
-        inherit inputs self hostname username userDescription;
+        inherit
+          inputs
+          self
+          hostname
+          username
+          userDescription
+          ;
         pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages.${arch};
       };
       modules = [
@@ -22,30 +28,35 @@ let
         # Basic settings for all computers
         {
           nix.settings = {
-            experimental-features = [ "nix-command" "flakes" ];
+            experimental-features = [
+              "nix-command"
+              "flakes"
+            ];
             auto-optimise-store = true;
           };
-          
-          nixpkgs.config.allowUnfree = true; 
+
+          nixpkgs.config.allowUnfree = true;
         }
-        
+
         # Home Manager (for user settings)
         inputs.home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
-          home-manager.users.${username} = { ... }: {
-            imports = [ "${self}/hosts/${hostDir}/home.nix" ];
-            _module.args = {
-              inherit username inputs self;
+          home-manager.users.${username} =
+            { ... }:
+            {
+              imports = [ "${self}/hosts/${hostDir}/home.nix" ];
+              _module.args = {
+                inherit username inputs self;
+              };
             };
-          };
         }
 
         # Lanzaboote for Secure Boot
         inputs.lanzaboote.nixosModules.lanzaboote
-        
+
         # All shared modules
         "${self}/modules/audio.nix"
         "${self}/modules/bluetooth.nix"
@@ -59,7 +70,7 @@ let
         "${self}/packages/default.nix"
         # "${self}/packages/security.nix"  # TODO
         "${self}/packages/virtualisation.nix"
-        
+
         # This computer's specific settings
         "${self}/hosts/${hostDir}/default.nix"
         "${self}/hosts/${hostDir}/hardware-configuration.nix"
@@ -70,10 +81,10 @@ let
         {
           services.syncthing = {
             enable = true;
-            user = "${username}";  # Spawn as user service
-            dataDir = "/home/${username}";  # Default location for new folders
+            user = "${username}"; # Spawn as user service
+            dataDir = "/home/${username}"; # Default location for new folders
             configDir = "/home/${username}/.config/syncthing";
-            openDefaultPorts = true;    # Open ports in the firewall for Syncthing
+            openDefaultPorts = true; # Open ports in the firewall for Syncthing
           };
         }
 
@@ -81,6 +92,6 @@ let
     };
 in
 {
-  mkHost = mkHost;  # Export the factory function
-  genHosts = builtins.mapAttrs mkHost;  # Export the assembly line
+  mkHost = mkHost; # Export the factory function
+  genHosts = builtins.mapAttrs mkHost; # Export the assembly line
 }

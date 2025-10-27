@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   # ZRAM
@@ -18,12 +23,12 @@
 
   # Set your time zone.
   time.timeZone = "Asia/Kuwait";
-  
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
-  #   font = "Lat2-Terminus16";
+    #   font = "Lat2-Terminus16";
     keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
+    #   useXkbConfig = true; # use xkb.options in tty.
   };
 }

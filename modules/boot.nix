@@ -1,9 +1,14 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   # Lanzaboote replaces systemd-boot for Secure Boot
   boot.loader.systemd-boot.enable = lib.mkForce false;
-  
+
   # Enable lanzaboote for Secure Boot
   boot.lanzaboote = {
     enable = true;
@@ -16,8 +21,12 @@
   ];
 
   # Use BTRFS
-  boot.supportedFilesystems = [ "btrfs" ];  
+  boot.supportedFilesystems = [ "btrfs" ];
 
   # Enable dm-crypt
-  boot.initrd.kernelModules = [ "dm-crypt" "btrfs" "dm-mod" ];
+  boot.initrd.kernelModules = [
+    "dm-crypt"
+    "btrfs"
+    "dm-mod"
+  ];
 }

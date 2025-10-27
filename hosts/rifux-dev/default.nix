@@ -2,28 +2,34 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, hostname, username, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  hostname,
+  username,
+  ...
+}:
 
 {
-  imports =
-    [
-      # LVM on LUKS2 with ZRAM and NVMe improvements
-      ./hardware/additions.nix
-      ./hardware/luks.nix
-      # Device-specific
-      ./../../device/thinkpad-amd.nix  # ThinkPad AMD tweaks
-      # Japanese
-      ./../../pkg/Japanese.nix
-      # Additional specific packages
-      ./packages
-    ];
+  imports = [
+    # LVM on LUKS2 with ZRAM and NVMe improvements
+    ./hardware/additions.nix
+    ./hardware/luks.nix
+    # Device-specific
+    ./../../device/thinkpad-amd.nix # ThinkPad AMD tweaks
+    # Japanese
+    ./../../pkg/Japanese.nix
+    # Additional specific packages
+    ./packages
+  ];
 
   # Hostname
   networking.hostName = hostname;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  
+
   # Use firmware
   hardware.enableAllFirmware = true;
 
@@ -33,14 +39,19 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${username} = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "vboxusers" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "libvirtd"
+      "vboxusers"
+    ]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
   };
 
   # Firewall-allowed ports
   networking.firewall.allowedTCPPorts = [
-  	53317	# LocalSend
-  	53049   # qBittorrent
+    53317 # LocalSend
+    53049 # qBittorrent
   ];
 
   # Change DNS
@@ -64,6 +75,5 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.05"; # Did you read the comment?
-  
-}
 
+}

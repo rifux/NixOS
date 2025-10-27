@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   environment.systemPackages = [
@@ -13,9 +18,19 @@
       exec = "vesktop --proxy-server=0.0.0.0:10808 %U";
       icon = "vesktop";
       type = "Application";
-      categories = [ "Network" "InstantMessaging" "Chat" ];
+      categories = [
+        "Network"
+        "InstantMessaging"
+        "Chat"
+      ];
       #genericName = "Internet Messenger (Proxy)";
-      keywords = [ "discord" "vencord" "electron" "chat" "proxy" ];
+      keywords = [
+        "discord"
+        "vencord"
+        "electron"
+        "chat"
+        "proxy"
+      ];
       comment = "Discord mod accessed through proxychains";
       startupWMClass = "Vesktop";
     })

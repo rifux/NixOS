@@ -1,9 +1,13 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocales = [ "ja_JP.UTF-8/UTF-8" ];
-  
 
   console.font = "Lat2-Terminus16";
   console.keyMap = "us";
@@ -18,7 +22,10 @@
       noto-fonts-emoji
     ];
     fontconfig.defaultFonts = {
-      monospace = [ "DejaVu Sans Mono" "IPAGothic" ];
+      monospace = [
+        "DejaVu Sans Mono"
+        "IPAGothic"
+      ];
       sansSerif = [ "Noto Sans CJK JP" ];
       serif = [ "Noto Serif CJK JP" ];
     };

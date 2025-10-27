@@ -1,4 +1,10 @@
-{ config, pkgs, inputs, username, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  username,
+  ...
+}:
 
 {
   # Home Manager configuration for user "me"

@@ -1,11 +1,16 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   # Rootless Docker
   virtualisation.docker = {
     # Consider disabling the system wide Docker daemon
     enable = false;
-  
+
     rootless = {
       enable = true;
       setSocketVariable = true;
@@ -26,22 +31,24 @@
   };
 
   # KVM
-  /*virtualisation.libvirtd = {
-    enable = true;
-    qemu = {
-      package = pkgs.qemu_kvm;
-      # runAsRoot = true;
-      swtpm.enable = true;
-      ovmf = {
-        enable = true;
-        packages = [(pkgs.OVMF.override {
-          secureBoot = true;
-          tpmSupport = true;
-        }).fd];
+  /*
+    virtualisation.libvirtd = {
+      enable = true;
+      qemu = {
+        package = pkgs.qemu_kvm;
+        # runAsRoot = true;
+        swtpm.enable = true;
+        ovmf = {
+          enable = true;
+          packages = [(pkgs.OVMF.override {
+            secureBoot = true;
+            tpmSupport = true;
+          }).fd];
+        };
       };
     };
-  };*/
-  
+  */
+
   environment.systemPackages = with pkgs; [
     # gnome-boxes
     distrobox

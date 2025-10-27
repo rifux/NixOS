@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   # KDE Plasma 6 with Wayland and SDDM
@@ -11,12 +16,12 @@
       };
     };
   };
-  
+
   # Ensure KWallet is properly integrated
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     # Exclude packages you don't want
   ];
-  
+
   # Enable PAM for KWallet integration
   security.pam.services = {
     sddm.enableKwallet = true;
