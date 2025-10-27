@@ -15,6 +15,7 @@
     go                          # Go programming language
     gopls                       # Go language server
     nixfmt-rfc-style            # Nix code formatter
+    nixfmt-tree                 # Nix code formatter recursive wrapper
     vscodium-fhs                # VS Code alternative (FHS compatibility)
     temurin-bin                 # Java distribution by Adoptium
 
