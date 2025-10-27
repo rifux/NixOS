@@ -44,6 +44,7 @@
       "wheel"
       "libvirtd"
       "vboxusers"
+      "adbusers"
     ]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
   };

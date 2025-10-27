@@ -136,6 +136,9 @@
     
   ]);
 
+  # ADB for Android devices and development
+  programs.adb.enable = true;
+
   # GNUPG for signing Git commits, etc
   programs.gnupg.agent = {
     enable = true;
