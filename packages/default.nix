@@ -105,6 +105,7 @@
     youtube-music               # YouTube Music client
     shortwave                   # Internet radio player
     cozy                        # Audiobook player
+    hypnotix                    # IPTV streaming application
 
     # === AI TOOLS === #
     alpaca                      # (local) AI assistant
