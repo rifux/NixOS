@@ -24,6 +24,9 @@
   # Set your time zone.
   time.timeZone = "Asia/Kuwait";
 
+  # Dynamic linker
+  programs.nix-ld.enable = true;
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
