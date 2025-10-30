@@ -12,6 +12,7 @@
     git                         # Version control
     micro                       # Modern  terminal text editor
     vim                         # Classic terminal text editor
+    gcc                         # The GNU compiler collection
     go                          # Go programming language
     gopls                       # Go language server
     nixfmt-rfc-style            # Nix code formatter
