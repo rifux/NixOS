@@ -129,6 +129,7 @@
 
     # === MISC === #
     gnome-weather               # Weather app
+    godot                       # Your free, open‑source game engine
 
   ] ++ (with pkgs-unstable; [
     # === SYSTEM UTILITIES & MANAGEMENT (UNSTABLE) === #
