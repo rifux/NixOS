@@ -88,6 +88,7 @@
     syncthing                   # Local file sync
     syncthingtray               # Local file sync integration
     qbittorrent-enhanced        # Torrent client
+    motrix                      # A full-featured download manager
 
     # === OFFICE & PRODUCTIVITY === #
     onlyoffice-desktopeditors   # Better office suite
