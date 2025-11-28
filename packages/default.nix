@@ -100,7 +100,8 @@
     keypunch                    # Typing practice application
     anki                        # Flashcard app
     wordbook                    # English dictionary app
-
+    pomodoro-gtk                # Time management (Pomodoro Technique)
+    
     # === ENTERTAINMENT === #
     komikku                     # Manga reader
     foliate                     # E-book reader
