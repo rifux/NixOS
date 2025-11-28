@@ -56,6 +56,7 @@
     pfetch-rs                   # System information tool (CLI, minimal)
     inxi                        # System information tool (CLI, advanced)
     cpu-x                       # System information tool (GUI)
+    smartmontools               # HDD/SSD health monitoring utility
 
     # === MULTIMEDIA & GRAPHICS === #
     vlc                         # Media player
