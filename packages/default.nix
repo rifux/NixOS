@@ -112,6 +112,7 @@
     youtube-music               # YouTube Music client
     shortwave                   # Internet radio player
     cozy                        # Audiobook player
+    miru                        # Stream anime from various sources
     hypnotix                    # IPTV streaming application
     popcorntime                 # Movie streaming via BitTorrent
     multiplex                   # Watch movies through BitTorrent together!
