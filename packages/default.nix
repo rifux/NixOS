@@ -89,6 +89,7 @@
     syncthingtray               # Local file sync integration
     qbittorrent-enhanced        # Torrent client
     motrix                      # A full-featured download manager
+    video-downloader            # GTK yt-dlp frontend
 
     # === OFFICE & PRODUCTIVITY === #
     onlyoffice-desktopeditors   # Better office suite
