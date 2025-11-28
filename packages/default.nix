@@ -111,6 +111,7 @@
     shortwave                   # Internet radio player
     cozy                        # Audiobook player
     hypnotix                    # IPTV streaming application
+    popcorntime                 # Movie streaming via BitTorrent
 
     # === AI TOOLS === #
     alpaca                      # (local) AI assistant
