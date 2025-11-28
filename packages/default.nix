@@ -46,6 +46,7 @@
     krusader                    # Ultimate File Manager
     kdePackages.kompare         # Graphical file differences tool
     krename                     # Powerful batch renamer for KDE
+    gnome-disk-utility          # Disk management and analysis tool
 
     # === INFO & MONITORING === #
     btop                        # System monitor (TUI)
