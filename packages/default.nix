@@ -112,6 +112,7 @@
     cozy                        # Audiobook player
     hypnotix                    # IPTV streaming application
     popcorntime                 # Movie streaming via BitTorrent
+    multiplex                   # Watch movies through BitTorrent together!
 
     # === AI TOOLS === #
     alpaca                      # (local) AI assistant
